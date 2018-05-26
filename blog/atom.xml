@@ -5,21 +5,21 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Developers' Blog</title>
- <link href="http://visrseq.github.io/blog/atom.xml" rel="self"/>
- <link href="http://visrseq.github.io/blog"/>
+ <link href="http://visrsoftware.github.io/blog/atom.xml" rel="self"/>
+ <link href="http://visrsoftware.github.io/blog"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://visrseq.github.io/blog</id>
+ <id>http://visrsoftware.github.io/blog</id>
  <author>
-   <name>VisRseq</name>
-   <email>visrseq@gmail.com</email>
+   <name>VisR Software</name>
+   <email>visrsoftware@gmail.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://visrseq.github.io{{ post.url }}"/>
+   <link href="http://visrsoftware.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://visrseq.github.io/{{ post.id }}</id>
+   <id>http://visrsoftware.github.io/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
